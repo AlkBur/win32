@@ -51,7 +51,7 @@ func WinMain() int {
 	wcex.ClassName = lpszClassName
 	wcex.IconSm       = icon
 
-	if _, err = RegisterClassEx(&wcex); err != nil{
+	if err = RegisterClassEx(&wcex); err != nil{
 		FatalErrNo("RegisterClassEx", err)
 	}
 
